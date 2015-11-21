@@ -1,0 +1,136 @@
+*** Starting uWSGI 2.0.11.2 (64bit) on [Sat Nov 21 19:32:39 2015] ***
+compiled with version: 4.8.4 on 21 November 2015 19:31:33
+os: Linux-3.13.0-32-generic #57-Ubuntu SMP Tue Jul 15 03:51:08 UTC 2014
+nodename: iZ23org81brZ
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /opt/hunteramos/hunter
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your processes number limit is 7770
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+Listen queue size is greater than the system max net.core.somaxconn (128).
+*** Starting uWSGI 2.0.11.2 (64bit) on [Sat Nov 21 19:40:45 2015] ***
+compiled with version: 4.8.4 on 21 November 2015 19:31:33
+os: Linux-3.13.0-32-generic #57-Ubuntu SMP Tue Jul 15 03:51:08 UTC 2014
+nodename: iZ23org81brZ
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /opt/hunteramos/hunter
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your processes number limit is 7770
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+Listen queue size is greater than the system max net.core.somaxconn (128).
+*** Starting uWSGI 2.0.11.2 (64bit) on [Sat Nov 21 19:44:45 2015] ***
+compiled with version: 4.8.4 on 21 November 2015 19:31:33
+os: Linux-3.13.0-32-generic #57-Ubuntu SMP Tue Jul 15 03:51:08 UTC 2014
+nodename: iZ23org81brZ
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /opt/hunteramos/hunter
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your processes number limit is 7770
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:9000 fd 3
+Python version: 2.7.6 (default, Jun 22 2015, 18:01:27)  [GCC 4.8.2]
+Python main interpreter initialized at 0xf4aac0
+python threads support enabled
+your server socket listen backlog is limited to 2048 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 518240 bytes (506 KB) for 16 cores
+*** Operational MODE: preforking+threaded ***
+ * Running on http://0.0.0.0:8008/
+ * Restarting with reloader
+unable to load configuration from uwsgi
+*** Starting uWSGI 2.0.11.2 (64bit) on [Sat Nov 21 19:50:35 2015] ***
+compiled with version: 4.8.4 on 21 November 2015 19:31:33
+os: Linux-3.13.0-32-generic #57-Ubuntu SMP Tue Jul 15 03:51:08 UTC 2014
+nodename: iZ23org81brZ
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /opt/hunteramos/hunter
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your processes number limit is 7770
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:9000 fd 3
+Python version: 2.7.6 (default, Jun 22 2015, 18:01:27)  [GCC 4.8.2]
+Python main interpreter initialized at 0x1237ac0
+python threads support enabled
+your server socket listen backlog is limited to 2048 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 518240 bytes (506 KB) for 16 cores
+*** Operational MODE: preforking+threaded ***
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 24944)
+spawned uWSGI worker 1 (pid: 24947, cores: 4)
+spawned uWSGI worker 2 (pid: 24948, cores: 4)
+spawned uWSGI worker 3 (pid: 24949, cores: 4)
+spawned uWSGI worker 4 (pid: 24950, cores: 4)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.11.2 (64bit) on [Sat Nov 21 19:50:46 2015] ***
+compiled with version: 4.8.4 on 21 November 2015 19:31:33
+os: Linux-3.13.0-32-generic #57-Ubuntu SMP Tue Jul 15 03:51:08 UTC 2014
+nodename: iZ23org81brZ
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /opt/hunteramos/hunter
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your processes number limit is 7770
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:9000 fd 3
+Python version: 2.7.6 (default, Jun 22 2015, 18:01:27)  [GCC 4.8.2]
+Python main interpreter initialized at 0x1a78ac0
+python threads support enabled
+your server socket listen backlog is limited to 2048 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 518240 bytes (506 KB) for 16 cores
+*** Operational MODE: preforking+threaded ***
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 24963)
+spawned uWSGI worker 1 (pid: 24966, cores: 4)
+spawned uWSGI worker 2 (pid: 24967, cores: 4)
+spawned uWSGI worker 3 (pid: 24968, cores: 4)
+spawned uWSGI worker 4 (pid: 24969, cores: 4)
