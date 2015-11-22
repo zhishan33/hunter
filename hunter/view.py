@@ -1,14 +1,15 @@
 # -*- coding: utf-8 -*-
 __author__ = 'canhuayin@gmail.com'
 import sys
+
 reload(sys)
 sys.setdefaultencoding('utf8')
-from flask import Flask, url_for, render_template
-from flask import request, session, redirect
-from flask import make_response
+from flask import make_response, Flask, request, session, g, redirect, url_for, \
+    abort, render_template, flash
 from utils.wrappers import require_login
-
-app = Flask(__name__)
+from utils.logger import PrintLog
+from hunter import app
+from utils.form import RegisterForm
 
 
 @app.route('/<name>', methods=['POST', 'GET'])
@@ -76,8 +77,9 @@ def service():
 
 
 @app.route('/form')
-@require_login
+# @require_login
 def form():
     # import pdb
     # pdb.set_trace()
+    PrintLog.print_log(s='sadfasdf')
     return render_template('hunter_form.html')

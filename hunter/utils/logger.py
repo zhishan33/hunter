@@ -3,10 +3,10 @@ __author__ = 'canhuayin@gmail.com'
 import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
-from hunter.view import app
 import traceback
 import sys
-
+import logging
+from hunter import app
 
 class PrintLog(object):
     def __init__(self):
@@ -31,7 +31,7 @@ class PrintLog(object):
         params = ''
         for key, value in kwargs.items():
             params += key + ':' + str(value) + ' '
-        app.logger.info('error_no_exception ' + params)
+        app.logger.error('error_no_exception ' + params)
 
     # 普通错误日志
     @classmethod
