@@ -7,7 +7,7 @@ sys.setdefaultencoding('utf8')
 from logging import FileHandler
 from hunter import app
 app.secret_key = '\xbbU\x90CQ\xba\r\x83\xa9\x94\xb773\xa2)\xc7\xdd%\x8d\xbdeCT\xf8'
-app.debug = False
+app.debug = True
 if not app.debug:
     import logging
     file_handler = FileHandler('log/serverlog')

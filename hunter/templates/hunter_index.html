@@ -6,13 +6,17 @@
           content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-     <link rel="SHORTCUT ICON" HREF="favicon.ico">
+    <link rel="SHORTCUT ICON" HREF="favicon.ico">
     <title>My App</title>
     <!-- Path to Framework7 Library CSS-->
     <link rel="stylesheet" href="../static/css/framework7.ios.css">
     <link rel="stylesheet" href="../static/css/framework7.ios.color.css">
     <link rel="stylesheet" href="../static/css/font-awesome.css">
     <link rel="stylesheet" href="../static/css/framework7.ios.color.css">
+    <link rel="stylesheet" href="/static/css/framework7.ios.css">
+    <link rel="stylesheet" href="/static/css/framework7.ios.color.css">
+    <link rel="stylesheet" href="/static/css/font-awesome.css">
+    <link rel="stylesheet" href="/static/css/framework7.ios.color.css">
     <!-- Path to your custom app styles-->
     <link rel="stylesheet" href="/static/css/my-app.css">
 </head>
@@ -41,12 +45,12 @@
         <div class="navbar">
             <div class="navbar-inner">
                 <!-- We have home navbar without left link-->
-                <div class="center sliding">Awesome App</div>
-                <div class="right">
-                    <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right"
-                                                                                           class="link icon-only open-panel">
-                    <i class="icon icon-bars"></i></a>
-                </div>
+                <div class="center sliding">工作台</div>
+{#                <div class="right">#}
+{#                    <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right"#}
+{#                                                                                           class="link icon-only open-panel">#}
+{#                    <i class="icon icon-bars"></i></a>#}
+{#                </div>#}
             </div>
         </div>
         <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
@@ -69,12 +73,12 @@
                         <ul>
                             <li>
                                 <a href="/about" class="item-link">
-                                <div class="item-content">
-                                    <div class="item-inner">
-                                        <div class="item-title">About</div>
+                                    <div class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title">About</div>
+                                        </div>
                                     </div>
-                                </div>
-                            </a>
+                                </a>
                             </li>
                             <li><a href="/service" class="item-link">
                                 <div class="item-content">
@@ -105,9 +109,16 @@
             </div>
         </div>
         <!-- Bottom Toolbar-->
-        <div class="toolbar">
-            <div class="toolbar-inner"><a href="/index" class="link">Link 1</a><a href="/form" class="link">Link 2</a></div>
+        <div class="toolbar tabbar">
+            <div class="toolbar-inner">
+                <a href="/index" class="link"><i class="fa fa-bank"></i>工作台</a>
+                <a href="/product/index" class="link"><i class="fa fa-building"></i>超市</a>
+                <a href="/cart/index" class="link"><i class="fa fa-shopping-cart"></i>购物车</a>
+                <a href="/user/info/index" class="link"><i class="fa fa-user"></i>我</a>
+            </div>
+
         </div>
+
     </div>
 </div>
 <!-- Path to Framework7 Library JS-->

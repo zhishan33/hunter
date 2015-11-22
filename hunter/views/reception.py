@@ -16,10 +16,10 @@ from hunter.utils.wrappers import require_login
 
 
 # 工作台首页
-@app.route('/reception/index')
+@app.route('/index')
 @require_login
 def reception_index():
-    return render_template('hunter_reception.html')
+    return render_template('hunter_index.html')
 
 
 # 第一排------------------------------------------

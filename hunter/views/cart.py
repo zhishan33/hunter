@@ -19,7 +19,7 @@ from hunter.utils.wrappers import require_login
 @app.route('/cart/index')
 @require_login
 def cart_index():
-    return render_template('hunter_cart.html')
+    return render_template('hunter_cart_index.html')
 
 
 # 添加商品至购物车

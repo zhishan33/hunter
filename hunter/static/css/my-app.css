@@ -1,3 +1,33 @@
-.right-panel,.left-panel{
+.panel {
     background-color: white;
+    color: red;
+}
+
+.toolbar .link {
+    color: black;
+    font-size: 0.7em;
+}
+
+.link i {
+    font-size: 1.5em;
+}
+
+.fa-pencil,.fa-save{
+    color: black;
+}
+
+.fa-heartbeat {
+    color: red;
+}
+
+.toolbar .black {
+    color: red;
+}
+
+.open-panel i {
+    color: black;
+}
+
+a.back, a.back i {
+    color: black;
 }

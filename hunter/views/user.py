@@ -25,8 +25,8 @@ def user_detail():
 # 用户信息更新表单页
 @app.route('/user/info/form')
 @require_login
-def user_address_form():
-    return render_template('hunter_user_address_form.html')
+def user_info_form():
+    return render_template('hunter_user_info_form.html')
 
 
 # 修改用户信息
