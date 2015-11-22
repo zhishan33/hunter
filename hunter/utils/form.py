@@ -3,6 +3,3 @@ __author__ = 'canhuayin@gmail.com'
 import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
-from view import *
-
-

@@ -134,3 +134,138 @@ spawned uWSGI worker 1 (pid: 24966, cores: 4)
 spawned uWSGI worker 2 (pid: 24967, cores: 4)
 spawned uWSGI worker 3 (pid: 24968, cores: 4)
 spawned uWSGI worker 4 (pid: 24969, cores: 4)
+*** Starting uWSGI 2.0.11.2 (64bit) on [Sun Nov 22 12:52:12 2015] ***
+compiled with version: 4.8.4 on 02 November 2015 22:38:20
+os: Linux-3.19.0-33-generic #38~14.04.1-Ubuntu SMP Fri Nov 6 18:17:28 UTC 2015
+nodename: yourlove
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 8
+current working directory: /home/killme/PycharmProjects/merlin
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 30960
+your memory page size is 4096 bytes
+detected max file descriptor number: 4096
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+Listen queue size is greater than the system max net.core.somaxconn (1024).
+*** Starting uWSGI 2.0.11.2 (64bit) on [Sun Nov 22 12:56:21 2015] ***
+compiled with version: 4.8.4 on 02 November 2015 22:38:20
+os: Linux-3.19.0-33-generic #38~14.04.1-Ubuntu SMP Fri Nov 6 18:17:28 UTC 2015
+nodename: yourlove
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 8
+current working directory: /home/killme/PycharmProjects/merlin
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 30960
+your memory page size is 4096 bytes
+detected max file descriptor number: 4096
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:9000 fd 3
+Python version: 2.7.6 (default, Jun 22 2015, 18:01:27)  [GCC 4.8.2]
+Python main interpreter initialized at 0x2376060
+python threads support enabled
+your server socket listen backlog is limited to 1024 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 518400 bytes (506 KB) for 16 cores
+*** Operational MODE: preforking+threaded ***
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 14960)
+spawned uWSGI worker 1 (pid: 14963, cores: 4)
+spawned uWSGI worker 2 (pid: 14964, cores: 4)
+spawned uWSGI worker 3 (pid: 14965, cores: 4)
+spawned uWSGI worker 4 (pid: 14969, cores: 4)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.11.2 (64bit) on [Sun Nov 22 12:58:44 2015] ***
+compiled with version: 4.8.4 on 02 November 2015 22:38:20
+os: Linux-3.19.0-33-generic #38~14.04.1-Ubuntu SMP Fri Nov 6 18:17:28 UTC 2015
+nodename: yourlove
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 8
+current working directory: /home/killme/PycharmProjects/merlin
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 30960
+your memory page size is 4096 bytes
+detected max file descriptor number: 4096
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:9000 fd 3
+Python version: 2.7.6 (default, Jun 22 2015, 18:01:27)  [GCC 4.8.2]
+Python main interpreter initialized at 0xc04060
+python threads support enabled
+your server socket listen backlog is limited to 1024 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 518400 bytes (506 KB) for 16 cores
+*** Operational MODE: preforking+threaded ***
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 15057)
+spawned uWSGI worker 1 (pid: 15060, cores: 4)
+spawned uWSGI worker 2 (pid: 15061, cores: 4)
+spawned uWSGI worker 3 (pid: 15062, cores: 4)
+spawned uWSGI worker 4 (pid: 15063, cores: 4)
+--- no python application found, check your startup logs for errors ---
+{address space usage: 306016256 bytes/291MB} {rss usage: 17534976 bytes/16MB} [pid: 15063|app: -1|req: -1/1] 127.0.0.1 () {46 vars in 835 bytes} [Sun Nov 22 12:58:48 2015] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+{address space usage: 306016256 bytes/291MB} {rss usage: 17534976 bytes/16MB} [pid: 15061|app: -1|req: -1/2] 127.0.0.1 () {48 vars in 806 bytes} [Sun Nov 22 12:58:48 2015] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+*** Starting uWSGI 2.0.11.2 (64bit) on [Sun Nov 22 12:59:59 2015] ***
+compiled with version: 4.8.4 on 02 November 2015 22:38:20
+os: Linux-3.19.0-33-generic #38~14.04.1-Ubuntu SMP Fri Nov 6 18:17:28 UTC 2015
+nodename: yourlove
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 8
+current working directory: /home/killme/PycharmProjects/merlin
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 30960
+your memory page size is 4096 bytes
+detected max file descriptor number: 4096
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:9000 fd 3
+Python version: 2.7.6 (default, Jun 22 2015, 18:01:27)  [GCC 4.8.2]
+Python main interpreter initialized at 0x1965060
+python threads support enabled
+your server socket listen backlog is limited to 1024 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 518400 bytes (506 KB) for 16 cores
+*** Operational MODE: preforking+threaded ***
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 15125)
+spawned uWSGI worker 1 (pid: 15128, cores: 4)
+spawned uWSGI worker 2 (pid: 15129, cores: 4)
+spawned uWSGI worker 3 (pid: 15130, cores: 4)
+spawned uWSGI worker 4 (pid: 15134, cores: 4)
+--- no python application found, check your startup logs for errors ---
+{address space usage: 306020352 bytes/291MB} {rss usage: 16846848 bytes/16MB} [pid: 15134|app: -1|req: -1/1] 127.0.0.1 () {46 vars in 835 bytes} [Sun Nov 22 13:00:06 2015] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+{address space usage: 306020352 bytes/291MB} {rss usage: 17612800 bytes/16MB} [pid: 15134|app: -1|req: -1/2] 127.0.0.1 () {48 vars in 806 bytes} [Sun Nov 22 13:00:07 2015] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 1)
+--- no python application found, check your startup logs for errors ---
+{address space usage: 306020352 bytes/291MB} {rss usage: 16838656 bytes/16MB} [pid: 15130|app: -1|req: -1/3] 127.0.0.1 () {46 vars in 835 bytes} [Sun Nov 22 13:00:07 2015] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+{address space usage: 306020352 bytes/291MB} {rss usage: 18944000 bytes/18MB} [pid: 15129|app: -1|req: -1/4] 127.0.0.1 () {48 vars in 806 bytes} [Sun Nov 22 13:00:07 2015] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+{address space usage: 306020352 bytes/291MB} {rss usage: 16838656 bytes/16MB} [pid: 15128|app: -1|req: -1/5] 127.0.0.1 () {46 vars in 835 bytes} [Sun Nov 22 13:00:08 2015] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+{address space usage: 306020352 bytes/291MB} {rss usage: 19701760 bytes/18MB} [pid: 15129|app: -1|req: -1/6] 127.0.0.1 () {48 vars in 806 bytes} [Sun Nov 22 13:00:08 2015] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 3)
+--- no python application found, check your startup logs for errors ---
+{address space usage: 306020352 bytes/291MB} {rss usage: 17637376 bytes/16MB} [pid: 15134|app: -1|req: -1/7] 127.0.0.1 () {46 vars in 835 bytes} [Sun Nov 22 13:00:08 2015] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 2)
+--- no python application found, check your startup logs for errors ---
+{address space usage: 306020352 bytes/291MB} {rss usage: 17604608 bytes/16MB} [pid: 15128|app: -1|req: -1/8] 127.0.0.1 () {48 vars in 806 bytes} [Sun Nov 22 13:00:08 2015] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 2)
