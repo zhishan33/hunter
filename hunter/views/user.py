@@ -19,7 +19,7 @@ from hunter.utils.wrappers import require_login
 @app.route('/user/info/index')
 @require_login
 def user_detail():
-    return render_template('hunter_user_index.html')
+    return render_template('hunter_user_index.html',**{'user':{}})
 
 
 # 用户信息更新表单页
