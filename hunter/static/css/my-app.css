@@ -12,7 +12,7 @@
     font-size: 1.5em;
 }
 
-.fa-pencil,.fa-save{
+.fa-pencil, .fa-save {
     color: black;
 }
 
@@ -31,3 +31,94 @@
 a.back, a.back i {
     color: black;
 }
+
+.panel-left a {
+    font-size: 1.2em;
+    color: black;
+}
+
+/* A bit of demo styles */
+.swiper-container {
+    height: 200px;
+}
+
+.swiper-slide {
+    background: #fff;
+}
+
+.swiper-slide span {
+    text-align: center;
+    display: block;
+    margin: 20px;
+    font-size: 21px;
+}
+
+.btn-danger {
+    background-color: red;
+    color: red;
+}
+
+.btn-primary {
+    background-color: green;
+}
+
+/*
+首页样式
+*/
+#page-index div {
+    border: none
+}
+
+#page-index .i-center {
+    text-align: center;
+}
+
+#page-index .row {
+    margin-top: 5px;
+}
+
+#page-index a {
+    color: black;
+}
+
+/*
+产品页面
+*/
+.product .item-media div {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    height: 80px;
+    width: 80px;
+}
+
+.product-detail .swiper-slide div {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    height: 100%;
+}
+
+.product-detail .detail_row {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.product-detail .detail_row .detail_row_left {
+    float: left;
+    display: inline-block;
+    width:50%;
+}
+.product-detail .detail_row .detail_row_right {
+    float: right;
+    display: inline-block;
+    width:50%;
+}
+
+/*#page-index .content-block{*/
+/*border:none;*/
+/*}*/
+/*#page-index .content-block-inner{*/
+/*background: #f7f7f8;*/
+/*border: none;*/
+/*}*/

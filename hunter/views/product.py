@@ -74,7 +74,7 @@ def product_recommend():
 
 
 # 产品详情页面
-@app.route('/product/detail', methods=['POST'])
+@app.route('/product/detail/<int:id>', methods=['POST','GET'])
 @require_login
-def product_detail():
+def product_detail(id):
     return render_template('hunter_product_detail.html')
