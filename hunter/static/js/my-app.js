@@ -66,12 +66,13 @@ var myApp = new Framework7({
 
 });
 
+
 // Export selectors engine
 var $$ = Dom7;
-$$('.toolbar .link').click(function(){
+$$('.toolbar .link').click(function () {
     $$('.toolbar .link').removeClass('black');
     $$(this).addClass('black')
-})
+});
 //// Add view
 var mainView = myApp.addView('.view-main', {
     // Because we use fixed-through navbar we can enable dynamic navbar
@@ -104,6 +105,16 @@ myApp.onPageInit('about', function (page) {
     $$('.create-page').on('click', function () {
         createContentPage();
     });
+});
+myApp.onPageAfterAnimation('product_detail', function (page) {
+    // run createContentPage func after link was clicked
+    var mySwiper = myApp.swiper('.swiper-container', {
+        speed: 400,
+        spaceBetween: 100
+    });
+    $$('.swiper-wrapper').click(function(){
+        alert('hello')
+    })
 });
 // Callbacks to run specific code for specific pages, for example for About page:
 

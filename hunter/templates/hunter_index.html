@@ -7,7 +7,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <link rel="SHORTCUT ICON" HREF="favicon.ico">
-    <title>My App</title>
+    <title>Hungter</title>
     <!-- Path to Framework7 Library CSS-->
     <link rel="stylesheet" href="../static/css/framework7.ios.css">
     <link rel="stylesheet" href="../static/css/framework7.ios.color.css">
@@ -28,13 +28,52 @@
 <!-- Left panel with reveal effect-->
 <div class="panel panel-left panel-reveal">
     <div class="content-block">
-        <p>Left panel content goes here</p>
+        <div class="content-block-title">产品分类</div>
+            <div class="list-block media-list">
+                <ul>
+                    {% for i in range(10) %}
+                        <li>
+                            <a href="/product/detail/{{ i }}" class="item-link item-content">
+
+                                <div class="item-inner" style="border-bottom: none;">
+                                    <div class="item-title-row">
+                                        <div class="item-title">Yellow Submarine</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
 <!-- Right panel with cover effect-->
 <div class="panel panel-right panel-cover">
     <div class="content-block">
-        <p>Right panel content goes here</p>
+        <div class="content-block-title">推荐产品</div>
+            <div class="list-block media-list">
+                <ul>
+                    {% for i in range(10) %}
+                        <li>
+                            <a href="/product/detail/{{ i }}" class="item-link item-content">
+                                <div class="item-media">
+{#                                    <div style="background-image: url('/static/img/photo{{ i }}.jpg');width:80px"></div>#}
+                                    <img src="/static/img/photo{{ i }}.jpg" style="width: 80px">
+                                </div>
+                                <div class="item-inner" style="border-bottom: none;width: 100px">
+                                    <div class="item-title-row">
+                                        <div class="item-title">Yellow Submarine</div>
+                                    </div>
+                                    <div class="item-subtitle">Beatles</div>
+                                    <div class="item-text"  style="border: none">Lorem ipsum dolor sit amet...</div>
+                                </div>
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
 <!-- Views-->
@@ -44,65 +83,44 @@
         <!-- Top Navbar-->
         <div class="navbar">
             <div class="navbar-inner">
-                <!-- We have home navbar without left link-->
-                <div class="center sliding">工作台</div>
-{#                <div class="right">#}
-{#                    <!-- Right link contains only icon - additional "icon-only" class--><a href="#" data-panel="right"#}
-{#                                                                                           class="link icon-only open-panel">#}
-{#                    <i class="icon icon-bars"></i></a>#}
-{#                </div>#}
+                {#                <!-- We have home navbar without left link-->#}
+                {#                <div class=" col-100">#}
+                {#                    <form data-search-list=".list-block-search" data-search-in=".item-title"#}
+                {#                          class="searchbar searchbar-init col-100">#}
+                {#                        <div class="searchbar-input">#}
+                {#                            <input type="search" placeholder="Search"><a href="#" class="searchbar-clear"></a>#}
+                {#                        </div>#}
+                {#                        <a href="#" class="searchbar-cancel">Cancel</a>#}
+                {#                    </form>#}
+                {#                    <div class="searchbar-overlay col-100" style="width:100%;border:solid red 1px"></div>#}
+                {#                </div>#}
+                <div class="center sliding">Hunter</div>
             </div>
         </div>
+
         <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
         <div class="pages navbar-through toolbar-through">
             <!-- Page, data-page contains page name-->
-            <div data-page="index" class="page"  >
-                <!-- Scrollable page content-->
-                <div class="page-content" >
-                    <div class="content-block-title">Welcome To My Awesome App</div>
-                    <div class="content-block">
-                        <div class="content-block-inner">
-                            <p>Couple of worlds here because my app is so awesome!</p>
-
-                            <p>Duis sed erat ac eros ultrices pharetra id ut tellus. Praesent rhoncus enim ornare ipsum
-                                aliquet ultricies. Pellentesque sodales erat quis elementum sagittis.</p>
-                        </div>
-                    </div>
-                    <div class="content-block-title">What about simple navigation?</div>
-                    <div class="list-block">
-                        <ul>
-                            <li>
-                                <a href="/about" class="item-link">
-                                    <div class="item-content">
-                                        <div class="item-inner">
-                                            <div class="item-title">About</div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li><a href="/service" class="item-link">
-                                <div class="item-content">
-                                    <div class="item-inner">
-                                        <div class="item-title">Services</div>
-                                    </div>
-                                </div>
-                            </a></li>
-                            <li><a href="/form" class="item-link">
-                                <div class="item-content">
-                                    <div class="item-inner">
-                                        <div class="item-title">Form</div>
-                                    </div>
-                                </div>
-                            </a></li>
-                        </ul>
-                    </div>
-                    <div class="content-block-title">Side panels</div>
+            <div data-page="index" class="page" id="page-index">
+                <div class="page-content" style="margin-top: 0;background: #f7f7f8;">
                     <div class="content-block">
                         <div class="row">
-                            <div class="col-50"><a href="#" data-panel="left" class="button open-panel">About</a>
-                            </div>
-                            <div class="col-50"><a href="#" data-panel="right" class="button open-panel">Service</a>
-                            </div>
+                            <div class="col-33 i-center"><a>扫一扫</a></div>
+                            <div class="col-33 i-center"><a>到付码</a></div>
+                            <div class="col-33 i-center"><a>周边</a></div>
+                        </div>
+                        <div class="row level1">
+                            <div class="col-33 i-center"><a>充值</a></div>
+                            <div class="col-33 i-center"><a>还款</a></div>
+                            <div class="col-33 i-center"><a>消费</a></div>
+                        </div>
+                        <div class="row level1">
+                            <div class="col-33 i-center"><a>卡次</a></div>
+                            <div class="col-33 i-center"><a>活动</a></div>
+                            <div class="col-33 i-center"><a>优惠券</a></div>
+                        </div>
+                        <div class="row level1">
+                            <div class="col-33 i-center"><a>签到</a></div>
                         </div>
                     </div>
                 </div>

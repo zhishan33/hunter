@@ -1,0 +1,89 @@
+<link rel="stylesheet" href="../static/css/framework7.ios.css">
+<link rel="stylesheet" href="../static/css/framework7.ios.color.css">
+<link rel="stylesheet" href="../static/css/font-awesome.css">
+<link rel="stylesheet" href="../static/css/framework7.ios.color.css">
+<!-- We don't need full layout here, because this page will be parsed with Ajax-->
+<!-- Top Navbar-->
+<div class="navbar">
+    <div class="navbar-inner">
+
+        <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+        <div class="center"><span>加入购物车</span></div>
+        <div class="right">
+            <a href="#" class="link icon-only open-panel" data-panel="right">
+                <i class="fa fa-heartbeat" style="color:red"></i>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="pages">
+    <!-- Page, data-page contains page name-->
+    <div data-page="product_detail" class="page product-detail">
+        <!-- Scrollable page content-->
+        <div class="page-content">
+            <div class="swiper-container" style="background-color: #f7f7f8">
+                <div class="swiper-wrapper">
+                    {% for i in range(5) %}
+                        <div class="swiper-slide">
+                            <div style="background-image: url('/static/img/photo{{ i }}.jpg');"></div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div style="height: 10px"></div>
+            <div class="row">
+                <div class="col-100" style="padding-left: 10px">产品名称</div>
+            </div>
+            <div class="row">
+                <div class="col-25" style="padding-left: 10px">价格</div>
+                <div class="col-75">$200.00</div>
+            </div>
+            <div class="row">
+                <div class="col-25" style="padding-left: 10px">颜色</div>
+                <div class="col-75">红色</div>
+            </div>
+            <div class="row">
+                <div class="col-25" style="padding-left: 10px">高度</div>
+                <div class="col-75" style="padding-right: 10px">20CM</div>
+            </div>
+            <div style="height: 10px"></div>
+            <div class="row">
+                <div class="col-50" style="padding-left: 10px">
+                    <div style="height:29px;line-height: 27px;">
+                        <button style="color:white;background-color: red;border:none;font-size: 1.2em;width: 30px;height: 29px;border-radius: 50%">
+                            -
+                        </button>
+                        <div style="display: inline-block;width: 20px;text-align: center;border-bottom: solid red 2px">
+                            1
+                        </div>
+                        <button style="color:white;background-color: red;border: none;font-size: 1.2em;width: 30px;height: 29px;border-radius: 50%">
+                            +
+                        </button>
+                    </div>
+                </div>
+                <div class="col-50" style="padding-right: 10px">
+                    <button style="float: right;background-color: black"
+                            class="button button-fill btn-danger">加入购物车
+                    </button>
+                </div>
+            </div>
+            <div style="padding-left: 10px;padding-right: 10px;margin-top: 10px;margin-bottom: 10px">
+                <div style="background-color: #d5d5d5;padding: 5px">产品详情</div>
+                <div style="padding: 5px;border:solid silver 1px">
+                    　联想推出的这款虚拟现实设备全称是：乐檬蚁视VR眼镜，这款VR眼镜大视角无畸变，用户可以将手机插入进去充当VR内容的屏幕，直接切换VR观看模式。
+                    　　售价方面，乐檬miniStation价格为699元，而乐檬蚁视VR眼镜售价则为199元。
+                    虚拟现实成标配：联想联手腾讯蚁视推VR眼镜
+
+                    虚拟现实成标配：联想联手腾讯蚁视推VR眼镜
+                    　　不止联想，三星在去年 9 月和 Oculus 合作的虚拟现实头盔Gear VR Innovation Edition，就需要你把 Galaxy Note 4 放进去才能使用。LG 在今年 2
+                    月发布VR For G3虚拟现实眼镜，也需要架上 LG G3 这款手机才能使用。
+                    　　不过缺少足够的内容，可能是联想这款虚拟现实设备的缺点。在我们发布会后的上手中，联想乐檬 X3 手机中只内置了 4 段专门适用于 VR
+                    眼镜的视频。并且都是自然景观类型的，估计没有几个用户会戴着厚重的眼镜经常观看这种视频吧?
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
