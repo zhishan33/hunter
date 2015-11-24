@@ -29,52 +29,52 @@
 <div class="panel panel-left panel-reveal">
     <div class="content-block">
         <div class="content-block-title">产品分类</div>
-            <div class="list-block media-list">
-                <ul>
-                    {% for i in range(10) %}
-                        <li>
-                            <a href="/product/detail/{{ i }}" class="item-link item-content">
+        <div class="list-block media-list">
+            <ul>
+                {% for i in range(10) %}
+                    <li>
+                        <a href="/product/detail/{{ i }}" class="item-link item-content">
 
-                                <div class="item-inner" style="border-bottom: none;">
-                                    <div class="item-title-row">
-                                        <div class="item-title">Yellow Submarine</div>
-                                    </div>
+                            <div class="item-inner" style="border-bottom: none;">
+                                <div class="item-title-row">
+                                    <div class="item-title">Yellow Submarine</div>
                                 </div>
-                            </a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
+                            </div>
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
         </div>
     </div>
+</div>
 </div>
 <!-- Right panel with cover effect-->
 <div class="panel panel-right panel-cover">
     <div class="content-block">
         <div class="content-block-title">推荐产品</div>
-            <div class="list-block media-list">
-                <ul>
-                    {% for i in range(10) %}
-                        <li>
-                            <a href="/product/detail/{{ i }}" class="item-link item-content">
-                                <div class="item-media">
-{#                                    <div style="background-image: url('/static/img/photo{{ i }}.jpg');width:80px"></div>#}
-                                    <img src="/static/img/photo{{ i }}.jpg" style="width: 80px">
+        <div class="list-block media-list">
+            <ul>
+                {% for i in range(10) %}
+                    <li>
+                        <a href="/product/detail/{{ i }}" class="item-link item-content">
+                            <div class="item-media">
+                                {#                                    <div style="background-image: url('/static/img/photo{{ i }}.jpg');width:80px"></div>#}
+                                <img src="/static/img/photo{{ i }}.jpg" style="width: 80px">
+                            </div>
+                            <div class="item-inner" style="border-bottom: none;width: 100px">
+                                <div class="item-title-row">
+                                    <div class="item-title">Yellow Submarine</div>
                                 </div>
-                                <div class="item-inner" style="border-bottom: none;width: 100px">
-                                    <div class="item-title-row">
-                                        <div class="item-title">Yellow Submarine</div>
-                                    </div>
-                                    <div class="item-subtitle">Beatles</div>
-                                    <div class="item-text"  style="border: none">Lorem ipsum dolor sit amet...</div>
-                                </div>
-                            </a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
+                                <div class="item-subtitle">Beatles</div>
+                                <div class="item-text" style="border: none">Lorem ipsum dolor sit amet...</div>
+                            </div>
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
         </div>
     </div>
+</div>
 </div>
 <!-- Views-->
 <div class="views">
@@ -105,22 +105,112 @@
                 <div class="page-content" style="margin-top: 0;background: #f7f7f8;">
                     <div class="content-block">
                         <div class="row">
-                            <div class="col-33 i-center"><a>扫一扫</a></div>
-                            <div class="col-33 i-center"><a>到付码</a></div>
-                            <div class="col-33 i-center"><a>周边</a></div>
+                            <div class="col-33 i-center">
+                                <a>
+                                    <div>
+                                        <img src="/static/img/index_icon.png">
+                                    </div>
+                                    <div>
+                                        扫一扫
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-33 i-center">
+                                <a>
+                                    <div>
+                                        <img src="/static/img/index_icon.png">
+                                    </div>
+                                    <div>
+                                        到付码
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-33 i-center">
+                                <a>
+                                    <div>
+                                        <img src="/static/img/index_icon.png">
+                                    </div>
+                                    <div>
+                                        周边
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                         <div class="row level1">
-                            <div class="col-33 i-center"><a>充值</a></div>
-                            <div class="col-33 i-center"><a>还款</a></div>
-                            <div class="col-33 i-center"><a>消费</a></div>
+                            <div class="col-33 i-center">
+                                <a>
+                                    <div>
+                                        <img src="/static/img/index_icon.png">
+                                    </div>
+                                    <div>
+                                        充值
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-33 i-center">
+                                <a>
+                                    <div>
+                                        <img src="/static/img/index_icon.png">
+                                    </div>
+                                    <div>
+                                        还款
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-33 i-center">
+                                <a>
+                                    <div>
+                                        <img src="/static/img/index_icon.png">
+                                    </div>
+                                    <div>
+                                        消费
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                         <div class="row level1">
-                            <div class="col-33 i-center"><a>卡次</a></div>
-                            <div class="col-33 i-center"><a>活动</a></div>
-                            <div class="col-33 i-center"><a>优惠券</a></div>
+                            <div class="col-33 i-center">
+                                <a>
+                                    <div>
+                                        <img src="/static/img/index_icon.png">
+                                    </div>
+                                    <div>
+                                        卡次
+                                    </div>
+                                </a>
+                               </div>
+                            <div class="col-33 i-center">
+                                <a>
+                                    <div>
+                                        <img src="/static/img/index_icon.png">
+                                    </div>
+                                    <div>
+                                        活动
+                                    </div>
+                                </a>
+                                </div>
+                            <div class="col-33 i-center">
+                                <a>
+                                    <div>
+                                        <img src="/static/img/index_icon.png">
+                                    </div>
+                                    <div>
+                                        优惠券
+                                    </div>
+                                </a>
+                                </div>
                         </div>
                         <div class="row level1">
-                            <div class="col-33 i-center"><a>签到</a></div>
+                            <div class="col-33 i-center">
+                                <a>
+                                    <div>
+                                        <img src="/static/img/index_icon.png">
+                                    </div>
+                                    <div>
+                                        签到
+                                    </div>
+                                </a>
+                                </div>
                         </div>
                     </div>
                 </div>
@@ -129,10 +219,26 @@
         <!-- Bottom Toolbar-->
         <div class="toolbar tabbar">
             <div class="toolbar-inner">
-                <a href="/index" class="link"><i class="fa fa-bank"></i>工作台</a>
-                <a href="/product/index" class="link"><i class="fa fa-building"></i>超市</a>
-                <a href="/cart/index" class="link"><i class="fa fa-shopping-cart"></i>购物车</a>
-                <a href="/user/info/index" class="link"><i class="fa fa-user"></i>我</a>
+                <a href="/index" class="link">
+                    <div>
+                        <i class="fa fa-bank"></i>
+                    </div>
+                    <div class="icon-info">
+                        工作台
+                    </div>
+                </a>
+                <a href="/product/index" class="link">
+                    <div><i class="fa fa-building"></i></div>
+                    <div class="icon-info">超市</div>
+                </a>
+                <a href="/cart/index" class="link">
+                    <div><i class="fa fa-shopping-cart"></i></div>
+                    <div class="icon-info">购物车</div>
+                </a>
+                <a href="/user/info/index" class="link">
+                    <div><i class="fa fa-user"></i></div>
+                    <div class="icon-info">我</div>
+                </a>
             </div>
 
         </div>

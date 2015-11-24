@@ -5,11 +5,15 @@
 
 .toolbar .link {
     color: black;
-    font-size: 0.7em;
+}
+
+.toolbar .link .icon-info {
+    color: black;
+    font-size: 0.5em;
 }
 
 .link i {
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 .fa-pencil, .fa-save {
@@ -73,6 +77,12 @@ a.back, a.back i {
     text-align: center;
 }
 
+#page-index .i-center img {
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+}
+
 #page-index .row {
     margin-top: 5px;
 }
@@ -107,12 +117,13 @@ a.back, a.back i {
 .product-detail .detail_row .detail_row_left {
     float: left;
     display: inline-block;
-    width:50%;
+    width: 50%;
 }
+
 .product-detail .detail_row .detail_row_right {
     float: right;
     display: inline-block;
-    width:50%;
+    width: 50%;
 }
 
 /*#page-index .content-block{*/
