@@ -65,6 +65,9 @@ a.back, a.back i {
     background-color: green;
 }
 
+.page-content{
+    background-color: white;
+}
 /*
 首页样式
 */
