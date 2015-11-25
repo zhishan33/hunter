@@ -8,12 +8,13 @@ from flask import make_response, Flask, request, session, g, redirect, url_for, 
     abort, render_template, flash
 from hunter.utils.wrappers import require_login
 from hunter.utils.logger import PrintLog
+from hunter.utils.models import User
 from hunter import app
 from hunter.utils.form import RegisterForm
 
-
 @app.route('/<name>', methods=['POST', 'GET'])
 def hello_world(name):
+
     return 'Hello there World! %s' % name
 
 

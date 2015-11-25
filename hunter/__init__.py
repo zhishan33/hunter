@@ -13,3 +13,4 @@ from hunter.views.order import *
 from hunter.views.product import *
 from hunter.views.reception import *
 from hunter.views.user import *
+from hunter.views.address import *

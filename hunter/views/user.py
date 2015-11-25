@@ -11,6 +11,7 @@ from hunter.utils.logger import PrintLog
 from hunter import app
 from hunter.utils.form import RegisterForm
 from hunter.utils.exception import LocalException
+from hunter.utils.models import User
 import json
 from hunter.utils.wrappers import require_login
 
@@ -19,8 +20,16 @@ from hunter.utils.wrappers import require_login
 @app.route('/user/info/index')
 @require_login
 def user_detail():
-    return render_template('hunter_user_index.html',**{'user':{}})
+    user = User('admin', '1')
+    if user.is_login:
+        info = user.read()
+    else:
+        info=[1]
+    return render_template('hunter_user_index.html', user=info[0])
 
+@app.route('/user/login',methods=['POST','GET'])
+def user_login():
+    user=User()
 
 # 用户信息更新表单页
 @app.route('/user/info/form')

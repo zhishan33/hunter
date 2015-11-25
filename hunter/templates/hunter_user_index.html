@@ -21,115 +21,61 @@
 </div>
 <div class="pages">
     <!-- Page, data-page contains page name-->
-    <div data-page="form" class="page">
+    <div data-page="user-index" class="page">
         <!-- Scrollable page content-->
-        <div class="page-content" style="padding-top: 0px">
-            <div style="height: 5px"></div>
-            <div class="list-block">
-                <ul>
-                    <li>
-                        <div class="item-content">
-                            <div class="item-inner">
-                                <div style="margin: 0 auto;width: 100px;height: 100px;border-radius: 50%;overflow: hidden;border:solid silver 1px">
-                                    <img src="../static/img/photo.jpg" style="margin: 0 auto;width:100px;height:100px">
-                                </div>
-
-                            </div>
+        <div class="page-content" id="user-index">
+            <div style="background-color: white">
+                <div style="padding: 20px 0 20px 0;background-image: url('../static/img/user_image_backgroud.jpeg');background-size: 100% auto;">
+                    <div style="margin: 0px auto;background-image:url('../static/img/photo1.jpg') ;background-size:auto 100%;background-repeat: no-repeat;background-position: center;width: 120px;height: 120px;border-radius: 50%;overflow: hidden;border:solid silver 1px">
+{#                        <img src="../static/img/photo1.jpg" style="margin: 0 auto;width:120px;height:120px">#}
+                    </div>
+                </div>
+                <div style='height: 20px'></div>
+                <div class="inforow">
+                    <div class="col-20">姓名</div>
+                    <div class="col-80">{{ user.name }}</div>
+                </div>
+                <div class="inforow">
+                    <div class="col-20">邮箱</div>
+                    <div class="col-80">{{ user.email }}</div>
+                </div>
+                <div class="inforow">
+                    <div class="col-20">生日</div>
+                    <div class="col-80">{{ user.birthdate }}</div>
+                </div>
+                <div class="inforow">
+                    <div class="col-20">城市</div>
+                    <div class="col-80">{{ user.city }}</div>
+                </div>
+                <div class="inforow">
+                    <div class="col-20">地址</div>
+                    <div class="col-80">{{ user.street }}</div>
+                </div>
+                <div class="inforow">
+                    <div class="col-20">积分</div>
+                    <div class="col-80">{{ user.credit }}</div>
+                </div>
+                <div class="inforow">
+                    <div class="col-20">等级</div>
+                    <div class="col-80">{{ user.level }}</div>
+                </div>
+                <div class="linkrow">
+                    <a href="/address/index">
+                        <div class="col-40">
+                            我的地址管理
+                            <span style="float: right;vertical-align: bottom;color: gray;font-size: 12px">&gt;</span>
                         </div>
-                    </li>
-                    <li>
-                        <div class="item-content">
-                            <div class="item-inner">
-                                <div class="item-title label">姓名</div>
-                                <div class="item-input">
-                                    {{ user.name }}MelrinGao
-                                </div>
-
-                            </div>
+                    </a>
+                </div>
+                <div class="linkrow">
+                    <a href="/order/index">
+                        <div class="col-40">
+                            我的订单
+{#                            <span class="fa fa-angle-right" style="float: right;font-size: 20px;vertical-align: bottom;color: gray"></span>#}
+                            <span style="float: right;vertical-align: bottom;color: gray;font-size: 12px">查看全部订单&gt;</span>
                         </div>
-                    </li>
-                    <li>
-                        <div class="item-content">
-                            <div class="item-inner">
-                                <div class="item-title label">邮箱</div>
-                                <div class="item-input">
-                                    {{ user.email }}canhuayin@gmail.com
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item-content">
-                            <div class="item-inner">
-                                <div class="item-title label">出生日期</div>
-                                <div class="item-input">
-                                    2014-04-30
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item-content">
-                            <div class="item-inner">
-                                <div class="item-title label">地区</div>
-                                <div class="item-input">
-                                    江苏/南京/玄武区
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item-content">
-                            <div class="item-inner">
-                                <div class="item-title label">地址</div>
-                                <div class="item-input">
-                                    玄武门1号
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item-content">
-                            <div class="item-inner">
-                                <div class="item-title label">积分</div>
-                                <div class="item-input">
-                                    50
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item-content">
-                            <div class="item-inner">
-                                <div class="item-title label">等级</div>
-                                <div class="item-input">
-                                    初级
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="/user/info/form" class="item-link">
-                            <div class="item-content">
-                                <div class="item-inner">
-                                    <div class="item-title label">我的地址管理</div>
-                                    <div class="item-after"></div>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/user/info/form" class="item-link">
-                            <div class="item-content">
-                                <div class="item-inner">
-                                    <div class="item-title label">我的订单</div>
-                                    <div class="item-after"></div>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-
-                </ul>
+                    </a>
+                </div>
             </div>
 
         </div>

@@ -6,6 +6,9 @@
           content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+    <META HTTP-EQUIV="Expires" CONTENT="0">
     <link rel="SHORTCUT ICON" HREF="favicon.ico">
     <title>Hungter</title>
     <!-- Path to Framework7 Library CSS-->
@@ -19,6 +22,14 @@
     <link rel="stylesheet" href="/static/css/framework7.ios.color.css">
     <!-- Path to your custom app styles-->
     <link rel="stylesheet" href="/static/css/my-app.css">
+    <style>
+        .list-block ul:before{
+            display: none;
+        }
+        .list-block ul:after{
+            display: none;
+        }
+    </style>
 </head>
 <body>
 <!-- Status bar overlay for fullscreen mode-->
@@ -81,7 +92,7 @@
     <!-- Your main view, should have "view-main" class-->
     <div class="view view-main">
         <!-- Top Navbar-->
-        <div class="navbar">
+        <div class="navbar no-border">
             <div class="navbar-inner">
                 {#                <!-- We have home navbar without left link-->#}
                 {#                <div class=" col-100">#}
@@ -178,7 +189,7 @@
                                         卡次
                                     </div>
                                 </a>
-                               </div>
+                            </div>
                             <div class="col-33 i-center">
                                 <a>
                                     <div>
@@ -188,7 +199,7 @@
                                         活动
                                     </div>
                                 </a>
-                                </div>
+                            </div>
                             <div class="col-33 i-center">
                                 <a>
                                     <div>
@@ -198,7 +209,7 @@
                                         优惠券
                                     </div>
                                 </a>
-                                </div>
+                            </div>
                         </div>
                         <div class="row level1">
                             <div class="col-33 i-center">
@@ -210,7 +221,7 @@
                                         签到
                                     </div>
                                 </a>
-                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

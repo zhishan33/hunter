@@ -16,13 +16,13 @@ var myApp = new Framework7({
     //ajaxLinks:undefined,//指定哪些链接需要用ajax加载，默认情况下（当为undefined时）Framework7 会使用ajax加载所有的链接。你可以通过设置一个CSS选择器来指定需要通过Ajax加载的链接，比如 "a.ajax" - 只有class 为 "ajax" 的链接。
     //dynamicPageUrl:'',//
     //externalLinks:'.external',//不应该被 Framework7 管理的链接的CSS选择器。比如 ".external" 会匹配到这样的链接 <a href="somepage.html" class="external"> (因为它有 "external" 类)
-    //animatePages:true,//如果你想禁用页面切换的动画，就把这个值设置为 false。
+    animatePages:true,//如果你想禁用页面切换的动画，就把这个值设置为 false。
     //preloadPreviousPage:true,//预加载上一页，为了能让"滑动返回上一页"功能正常工作，这个值应该设置为 true。
     //pushState:false,//如果你开发web app（而不是通过PhoneGap封装的混合应用)，那么这个功能将很有用（浏览器的URL将会看上去像这样 "http://my-webapp.com/#/about.html")。用户可以通过浏览器默认的前进后退按钮来操作。
     //swipeBackPage:false,//开启/关闭滑动返回上一页功能。
     //swipeBackPageThreshold:0,//单位px，当滑动距离超过这个数值的时候，滑动返回上一步功能就会生效
     //swipeBackPageActiveArea:30,//Value in px. Width of invisible left edge of the screen that triggers swipe back action
-    //swipeBackPageAnimateShadow:true,//打开/关闭 滑动返回时候的 box-shadow 动画。关闭这个功能可以提高性能。
+    swipeBackPageAnimateShadow:false,//打开/关闭 滑动返回时候的 box-shadow 动画。关闭这个功能可以提高性能。
     //swipeBackPageAnimateOpacity:true,//打开/关闭 滑动返回时候的半透明效果。关闭这个功能可以提高性能。
     //sortable:false,//如果你不使用可排序列表，可以禁用这个功能。因为禁用之后可能会有潜在的性能提升。
     //swipeout:true,//如果你使用滑动删除，禁用这个选项，可能会带来潜在的性能提升。
@@ -112,11 +112,24 @@ myApp.onPageAfterAnimation('product_detail', function (page) {
         speed: 400,
         spaceBetween: 100
     });
-    $$('.swiper-wrapper').click(function(){
+    $$('.swiper-wrapper').click(function () {
         alert('hello')
     })
 });
 // Callbacks to run specific code for specific pages, for example for About page:
+
+//个人详情修改表单页面
+myApp.onPageInit('user-info-form', function () {
+    var calendarDateFormat = myApp.calendar({
+        input: '#birthday',
+        dateFormat: 'yyyy-m-dd'
+    });
+    //$$('#imagebtn').click(function(){
+    //    //myApp.alert()
+    //    document.getElementById('image').click()
+    //
+    //})
+});
 
 
 // Generate dynamic page

@@ -2,7 +2,6 @@
     background-color: white;
     color: red;
 }
-
 .toolbar .link {
     color: black;
 }
@@ -126,10 +125,35 @@ a.back, a.back i {
     width: 50%;
 }
 
-/*#page-index .content-block{*/
-/*border:none;*/
-/*}*/
-/*#page-index .content-block-inner{*/
-/*background: #f7f7f8;*/
-/*border: none;*/
-/*}*/
+
+/****用户首页***/
+#user-index .inforow{
+    height: 25px;
+    line-height: 25px;
+    border-bottom:solid #e5e5e5 1px;
+    font-size: 17px;
+    padding: 5px;
+    background-color: white;
+}
+#user-index .inforow>div:first-child{
+    width:20%;
+    float: left;
+}
+#user-index .inforow>div:last-child{
+    width:70%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    float: right;
+    padding-left: 5px;
+}
+#user-index .linkrow{
+    height: 25px;
+    line-height: 25px;
+    border-bottom:solid #e5e5e5 1px;
+    font-size: 17px;
+    padding: 6px 10px 6px 5px ;
+}
+#user-index .linkrow a{
+    color:black;
+}

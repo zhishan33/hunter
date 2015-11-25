@@ -1,0 +1,49 @@
+<html>
+<head>
+    <link rel="stylesheet" href="../static/css/framework7.ios.css">
+    <link rel="stylesheet" href="../static/css/framework7.ios.color.css">
+    <link rel="stylesheet" href="../static/css/font-awesome.css">
+    <link rel="stylesheet" href="../static/css/framework7.ios.color.css">
+
+</head>
+<body>
+<!-- We don't need full layout here, because this page will be parsed with Ajax-->
+<!-- Top Navbar-->
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+        <div class="center sliding"></div>
+        <div class="right">
+            <!-- Right link contains only icon - additional "icon-only" class--><a href="/user/info/form" class="link">
+            <i class="fa fa-pencil"></i></a>
+        </div>
+    </div>
+</div>
+<div class="pages">
+    <!-- Page, data-page contains page name-->
+    <div data-page="user-login" class="page">
+        <!-- Scrollable page content-->
+        <div class="page-content" style="padding-top: 0px">
+            <div>
+                <form id="userlogin">
+                    <div class="list-block">
+                        <ul>
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label">姓名</div>
+                                    <div class="item-input">
+                                        <input name="name" type="text" placeholder="请填写您的姓名"/>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
