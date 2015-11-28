@@ -18,18 +18,20 @@ from hunter.utils.wrappers import require_login
 
 # 个人信息详情
 @app.route('/user/info/index')
-@require_login
+# @require_login
 def user_detail():
     user = User('admin', '1')
     if user.is_login:
         info = user.read()
     else:
-        info=[1]
+        info = [1]
     return render_template('hunter_user_index.html', user=info[0])
 
-@app.route('/user/login',methods=['POST','GET'])
+
+@app.route('/user/login', methods=['POST', 'GET'])
 def user_login():
-    user=User()
+    return render_template('hunter_user_login.html')
+
 
 # 用户信息更新表单页
 @app.route('/user/info/form')

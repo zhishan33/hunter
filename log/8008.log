@@ -269,3 +269,130 @@ spawned uWSGI worker 4 (pid: 15134, cores: 4)
 {address space usage: 306020352 bytes/291MB} {rss usage: 17637376 bytes/16MB} [pid: 15134|app: -1|req: -1/7] 127.0.0.1 () {46 vars in 835 bytes} [Sun Nov 22 13:00:08 2015] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 2)
 --- no python application found, check your startup logs for errors ---
 {address space usage: 306020352 bytes/291MB} {rss usage: 17604608 bytes/16MB} [pid: 15128|app: -1|req: -1/8] 127.0.0.1 () {48 vars in 806 bytes} [Sun Nov 22 13:00:08 2015] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 2)
+*** Starting uWSGI 2.0.11.2 (64bit) on [Sat Nov 28 21:05:40 2015] ***
+compiled with version: 4.8.4 on 02 November 2015 22:38:20
+os: Linux-3.19.0-33-generic #38~14.04.1-Ubuntu SMP Fri Nov 6 18:17:28 UTC 2015
+nodename: yourlove
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 8
+current working directory: /home/killme/PycharmProjects/merlin
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 30960
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /tmp/uwsgi.sock fd 3
+Python version: 2.7.6 (default, Jun 22 2015, 18:01:27)  [GCC 4.8.2]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1ddbb80
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 363840 bytes (355 KB) for 4 cores
+*** Operational MODE: preforking ***
+added [你的工程的根目录] to pythonpath.
+ImportError: No module named [模块名，这里用myapp]
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 7459)
+spawned uWSGI worker 1 (pid: 7461, cores: 1)
+spawned uWSGI worker 2 (pid: 7462, cores: 1)
+spawned uWSGI worker 3 (pid: 7463, cores: 1)
+spawned uWSGI worker 4 (pid: 7464, cores: 1)
+*** Starting uWSGI 2.0.11.2 (64bit) on [Sat Nov 28 21:07:13 2015] ***
+compiled with version: 4.8.4 on 02 November 2015 22:38:20
+os: Linux-3.19.0-33-generic #38~14.04.1-Ubuntu SMP Fri Nov 6 18:17:28 UTC 2015
+nodename: yourlove
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 8
+current working directory: /home/killme/PycharmProjects/merlin
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 30960
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /tmp/uwsgi.sock fd 3
+Python version: 2.7.6 (default, Jun 22 2015, 18:01:27)  [GCC 4.8.2]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1139960
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 363840 bytes (355 KB) for 4 cores
+*** Operational MODE: preforking ***
+added ~/PycharmProjects/merlin to pythonpath.
+1
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x1139960 pid: 7478 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 7478)
+spawned uWSGI worker 1 (pid: 7481, cores: 1)
+spawned uWSGI worker 2 (pid: 7482, cores: 1)
+spawned uWSGI worker 3 (pid: 7483, cores: 1)
+spawned uWSGI worker 4 (pid: 7484, cores: 1)
+*** Starting uWSGI 2.0.11.2 (64bit) on [Sat Nov 28 21:07:28 2015] ***
+compiled with version: 4.8.4 on 02 November 2015 22:38:20
+os: Linux-3.19.0-33-generic #38~14.04.1-Ubuntu SMP Fri Nov 6 18:17:28 UTC 2015
+nodename: yourlove
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 8
+current working directory: /home/killme/PycharmProjects/merlin
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 30960
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /tmp/uwsgi.sock fd 3
+Python version: 2.7.6 (default, Jun 22 2015, 18:01:27)  [GCC 4.8.2]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x2622960
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 363840 bytes (355 KB) for 4 cores
+*** Operational MODE: preforking ***
+added ~/PycharmProjects/merlin to pythonpath.
+1
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x2622960 pid: 7510 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 7510)
+spawned uWSGI worker 1 (pid: 7513, cores: 1)
+spawned uWSGI worker 2 (pid: 7514, cores: 1)
+spawned uWSGI worker 3 (pid: 7515, cores: 1)
+spawned uWSGI worker 4 (pid: 7516, cores: 1)
+{address space usage: 91795456 bytes/87MB} {rss usage: 19124224 bytes/18MB} [pid: 7516|app: 0|req: 1/1] 127.0.0.1 () {46 vars in 845 bytes} [Sat Nov 28 21:09:05 2015] GET /index => generated 23819 bytes in 53 msecs (HTTP/1.1 200) 2 headers in 82 bytes (1 switches on core 0)
+{address space usage: 91795456 bytes/87MB} {rss usage: 19324928 bytes/18MB} [pid: 7516|app: 0|req: 2/2] 127.0.0.1 () {46 vars in 840 bytes} [Sat Nov 28 21:09:05 2015] GET /static/css/framework7.ios.css => generated 150526 bytes in 7 msecs via sendfile() (HTTP/1.1 200) 7 headers in 290 bytes (1 switches on core 0)
+{address space usage: 91226112 bytes/87MB} {rss usage: 19185664 bytes/18MB} [pid: 7514|app: 0|req: 1/3] 127.0.0.1 () {46 vars in 836 bytes} [Sat Nov 28 21:09:05 2015] GET /static/css/font-awesome.css => generated 32318 bytes in 10 msecs via sendfile() (HTTP/1.1 200) 7 headers in 288 bytes (0 switches on core 0)
+{address space usage: 91488256 bytes/87MB} {rss usage: 18948096 bytes/18MB} [pid: 7515|app: 0|req: 1/4] 127.0.0.1 () {46 vars in 852 bytes} [Sat Nov 28 21:09:05 2015] GET /static/css/framework7.ios.color.css => generated 233 bytes in 19 msecs (HTTP/1.1 404) 2 headers in 72 bytes (1 switches on core 0)
+{address space usage: 91488256 bytes/87MB} {rss usage: 19202048 bytes/18MB} [pid: 7515|app: 0|req: 2/5] 127.0.0.1 () {46 vars in 824 bytes} [Sat Nov 28 21:09:05 2015] GET /static/css/my-app.css => generated 2373 bytes in 7 msecs via sendfile() (HTTP/1.1 200) 7 headers in 285 bytes (0 switches on core 0)
+{address space usage: 91488256 bytes/87MB} {rss usage: 19435520 bytes/18MB} [pid: 7515|app: 0|req: 3/6] 127.0.0.1 () {46 vars in 834 bytes} [Sat Nov 28 21:09:05 2015] GET /static/img/photo0.jpg => generated 372597 bytes in 4 msecs via sendfile() (HTTP/1.1 200) 7 headers in 276 bytes (0 switches on core 0)
+{address space usage: 91795456 bytes/87MB} {rss usage: 19570688 bytes/18MB} [pid: 7516|app: 0|req: 3/7] 127.0.0.1 () {46 vars in 821 bytes} [Sat Nov 28 21:09:05 2015] GET /static/js/framework7.min.js => generated 253755 bytes in 4 msecs via sendfile() (HTTP/1.1 200) 7 headers in 289 bytes (1 switches on core 0)
+{address space usage: 91795456 bytes/87MB} {rss usage: 19574784 bytes/18MB} [pid: 7516|app: 0|req: 4/8] 127.0.0.1 () {46 vars in 805 bytes} [Sat Nov 28 21:09:05 2015] GET /static/js/my-app.js => generated 11759 bytes in 1 msecs via sendfile() (HTTP/1.1 200) 7 headers in 287 bytes (0 switches on core 0)
+{address space usage: 91488256 bytes/87MB} {rss usage: 19439616 bytes/18MB} [pid: 7515|app: 0|req: 4/9] 127.0.0.1 () {46 vars in 834 bytes} [Sat Nov 28 21:09:06 2015] GET /static/img/photo1.jpg => generated 102334 bytes in 4 msecs via sendfile() (HTTP/1.1 200) 7 headers in 276 bytes (0 switches on core 0)
+{address space usage: 91795456 bytes/87MB} {rss usage: 19574784 bytes/18MB} [pid: 7516|app: 0|req: 5/10] 127.0.0.1 () {46 vars in 834 bytes} [Sat Nov 28 21:09:06 2015] GET /static/img/photo2.jpg => generated 175177 bytes in 5 msecs via sendfile() (HTTP/1.1 200) 7 headers in 276 bytes (0 switches on core 0)
+{address space usage: 91488256 bytes/87MB} {rss usage: 19443712 bytes/18MB} [pid: 7515|app: 0|req: 5/11] 127.0.0.1 () {46 vars in 834 bytes} [Sat Nov 28 21:09:06 2015] GET /static/img/photo3.jpg => generated 304576 bytes in 4 msecs via sendfile() (HTTP/1.1 200) 7 headers in 276 bytes (0 switches on core 0)
+{address space usage: 91488256 bytes/87MB} {rss usage: 19443712 bytes/18MB} [pid: 7515|app: 0|req: 6/12] 127.0.0.1 () {46 vars in 834 bytes} [Sat Nov 28 21:09:06 2015] GET /static/img/photo4.jpg => generated 237577 bytes in 3 msecs via sendfile() (HTTP/1.1 200) 7 headers in 276 bytes (1 switches on core 0)
+{address space usage: 91488256 bytes/87MB} {rss usage: 19443712 bytes/18MB} [pid: 7515|app: 0|req: 7/13] 127.0.0.1 () {46 vars in 834 bytes} [Sat Nov 28 21:09:06 2015] GET /static/img/photo5.jpg => generated 7593 bytes in 1 msecs via sendfile() (HTTP/1.1 200) 7 headers in 272 bytes (0 switches on core 0)
+{address space usage: 91488256 bytes/87MB} {rss usage: 19443712 bytes/18MB} [pid: 7515|app: 0|req: 8/14] 127.0.0.1 () {46 vars in 834 bytes} [Sat Nov 28 21:09:06 2015] GET /static/img/photo6.jpg => generated 340409 bytes in 4 msecs via sendfile() (HTTP/1.1 200) 7 headers in 276 bytes (0 switches on core 0)
+{address space usage: 91226112 bytes/87MB} {rss usage: 19189760 bytes/18MB} [pid: 7514|app: 0|req: 2/15] 127.0.0.1 () {46 vars in 834 bytes} [Sat Nov 28 21:09:06 2015] GET /static/img/photo7.jpg => generated 339617 bytes in 3 msecs via sendfile() (HTTP/1.1 200) 7 headers in 276 bytes (0 switches on core 0)
+{address space usage: 91488256 bytes/87MB} {rss usage: 19443712 bytes/18MB} [pid: 7515|app: 0|req: 9/16] 127.0.0.1 () {46 vars in 834 bytes} [Sat Nov 28 21:09:06 2015] GET /static/img/photo8.jpg => generated 189073 bytes in 3 msecs via sendfile() (HTTP/1.1 200) 7 headers in 276 bytes (0 switches on core 0)
+{address space usage: 91226112 bytes/87MB} {rss usage: 19193856 bytes/18MB} [pid: 7514|app: 0|req: 3/17] 127.0.0.1 () {46 vars in 834 bytes} [Sat Nov 28 21:09:06 2015] GET /static/img/photo9.jpg => generated 512827 bytes in 5 msecs via sendfile() (HTTP/1.1 200) 7 headers in 275 bytes (0 switches on core 0)
+{address space usage: 91226112 bytes/87MB} {rss usage: 19189760 bytes/18MB} [pid: 7513|app: 0|req: 1/18] 127.0.0.1 () {46 vars in 842 bytes} [Sat Nov 28 21:09:06 2015] GET /static/img/index_icon.png => generated 3451 bytes in 6 msecs via sendfile() (HTTP/1.1 200) 7 headers in 272 bytes (0 switches on core 0)
+{address space usage: 91488256 bytes/87MB} {rss usage: 19447808 bytes/18MB} [pid: 7515|app: 0|req: 10/19] 127.0.0.1 () {48 vars in 833 bytes} [Sat Nov 28 21:09:07 2015] GET /favicon.ico => generated 233 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 72 bytes (1 switches on core 0)
+{address space usage: 91488256 bytes/87MB} {rss usage: 19451904 bytes/18MB} [pid: 7515|app: 0|req: 11/20] 127.0.0.1 () {46 vars in 857 bytes} [Sat Nov 28 21:09:36 2015] GET / => generated 233 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 72 bytes (1 switches on core 0)
+{address space usage: 91795456 bytes/87MB} {rss usage: 19578880 bytes/18MB} [pid: 7516|app: 0|req: 6/21] 127.0.0.1 () {44 vars in 836 bytes} [Sat Nov 28 21:09:41 2015] GET /index => generated 23229 bytes in 32 msecs (HTTP/1.1 200) 2 headers in 82 bytes (1 switches on core 0)
+{address space usage: 92057600 bytes/87MB} {rss usage: 19890176 bytes/18MB} [pid: 7516|app: 0|req: 7/22] 127.0.0.1 () {44 vars in 843 bytes} [Sat Nov 28 21:09:41 2015] GET /static/css/framework7.ios.color.css => generated 233 bytes in 10 msecs (HTTP/1.1 404) 2 headers in 72 bytes (1 switches on core 0)
+{address space usage: 91226112 bytes/87MB} {rss usage: 19189760 bytes/18MB} [pid: 7513|app: 0|req: 2/23] 127.0.0.1 () {48 vars in 933 bytes} [Sat Nov 28 21:09:41 2015] GET /static/fonts/fontawesome-webfont.woff2?v=4.4.0 => generated 64464 bytes in 4 msecs via sendfile() (HTTP/1.1 200) 7 headers in 287 bytes (0 switches on core 0)
+{address space usage: 91897856 bytes/87MB} {rss usage: 19595264 bytes/18MB} [pid: 7515|app: 0|req: 12/24] 127.0.0.1 () {46 vars in 823 bytes} [Sat Nov 28 21:09:45 2015] GET /product/index => generated 1812 bytes in 18 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+{address space usage: 92057600 bytes/87MB} {rss usage: 19898368 bytes/18MB} [pid: 7516|app: 0|req: 8/25] 127.0.0.1 () {46 vars in 817 bytes} [Sat Nov 28 21:09:46 2015] GET /cart/index => generated 1812 bytes in 7 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+{address space usage: 92237824 bytes/87MB} {rss usage: 19914752 bytes/18MB} [pid: 7516|app: 0|req: 9/26] 127.0.0.1 () {46 vars in 807 bytes} [Sat Nov 28 21:09:47 2015] GET /index => generated 23229 bytes in 2 msecs (HTTP/1.1 200) 2 headers in 82 bytes (1 switches on core 0)
+{address space usage: 92237824 bytes/87MB} {rss usage: 19972096 bytes/19MB} [pid: 7516|app: 0|req: 10/27] 127.0.0.1 () {46 vars in 823 bytes} [Sat Nov 28 21:09:48 2015] GET /product/index => generated 1812 bytes in 2 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+{address space usage: 92237824 bytes/87MB} {rss usage: 19972096 bytes/19MB} [pid: 7516|app: 0|req: 11/28] 127.0.0.1 () {46 vars in 817 bytes} [Sat Nov 28 21:09:49 2015] GET /cart/index => generated 1812 bytes in 2 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+{address space usage: 91648000 bytes/87MB} {rss usage: 19861504 bytes/18MB} [pid: 7514|app: 0|req: 4/29] 127.0.0.1 () {46 vars in 827 bytes} [Sat Nov 28 21:09:50 2015] GET /user/info/index => generated 3756 bytes in 632 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+{address space usage: 92237824 bytes/87MB} {rss usage: 19972096 bytes/19MB} [pid: 7516|app: 0|req: 12/30] 127.0.0.1 () {44 vars in 855 bytes} [Sat Nov 28 21:09:51 2015] GET /static/img/user_image_backgroud.jpeg => generated 272438 bytes in 5 msecs via sendfile() (HTTP/1.1 200) 7 headers in 277 bytes (0 switches on core 0)
