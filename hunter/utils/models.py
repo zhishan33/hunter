@@ -7,21 +7,23 @@ sys.setdefaultencoding('utf8')
 import xmlrpclib
 from hunter import session
 
-SERVER_URL = 'http://www.hunteramos.com:8069/xmlrpc/'
-DB = 'shop'
-admin_login = 'admin'
-admin_pwd = '1'
-# SERVER_URL = 'http://127.0.0.1:8069/xmlrpc/'
-# DB = 'admin'
+# SERVER_URL = 'http://www.hunteramos.com:8069/xmlrpc/'
+# DB = 'shop'
 # admin_login = 'admin'
-# admin_pwd = 'a'
+# admin_pwd = '1'
+SERVER_URL = 'http://127.0.0.1:8069/xmlrpc/'
+DB = 'admin'
+admin_login = 'admin'
+admin_pwd = 'a'
 COMMON = xmlrpclib.ServerProxy(SERVER_URL + 'common')
 OBJ = xmlrpclib.ServerProxy(SERVER_URL + 'object')
 admin_uid = COMMON.login(DB, admin_login, admin_pwd)
 
 print(admin_uid)
+
+
 class BaseModel(object):
-    def __init__(self, login, pwd):
+    def __init__(self, login=admin_login, pwd=admin_pwd):
         self.login = login
         self.pwd = pwd
         self.loginin()
@@ -46,23 +48,37 @@ class BaseModel(object):
         pass
 
     def search(self, *args, **kwargs):
-        pass
+        OBJ.execute(DB, admin_uid, admin_pwd, self.model, 'search', kwargs['domain'])
 
 
 class User(BaseModel):
     columns = ['login', 'passwd', 'email', 'name', 'street', 'province', 'credit', 'level', 'birthdate']
     model = 'res.users'
 
-    def read(self):
-        result = OBJ.execute(DB, admin_uid, admin_pwd, self.model, 'read', [self.uid], self.columns)
+    def login_user(self, login, password):
+        flag = COMMON.login(DB, login, password)
+        return flag
+
+    def read(self, ids):
+        result = OBJ.execute(DB, admin_uid, admin_pwd, self.model, 'read', ids, self.columns)
         return result
+
+    def create(self, *args, **kwargs):
+        newuser = OBJ.execute(DB, admin_uid, admin_pwd, self.model, 'create',
+                              {'login': kwargs['login'], 'password': kwargs['password'], 'name': kwargs['name']})
+        return newuser
+
+    def search(self, domain):
+        ids = OBJ.execute(DB, admin_uid, admin_pwd, self.model, 'search', domain)
+        return ids
 
 
 class Address(BaseModel):
     columns = ['name', 'street', 'city', 'zip', 'phone', 'mobile', 'email', 'type', 'active']
     model = 'res.partner'
 
-    def create(self, name, street, city, zip, phone, mobile, email, user_id, add_type='contact', active=True):
+    @classmethod
+    def create(cls, name, street, city, zip, phone, mobile, email, user_id, add_type='contact', active=True):
         '''
         @:param name str；
         @:param street str；

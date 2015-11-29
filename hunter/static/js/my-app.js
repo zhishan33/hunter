@@ -1,10 +1,4 @@
 // Initialize your app
-
-function login_check(view, options) {
-    if (!myApp.session) {
-        view.router.loadPage('/user/login')
-    }
-}
 var myApp = new Framework7({
     modalTitle: 'Hunter',
     'init': false,
@@ -79,6 +73,7 @@ var myApp = new Framework7({
 });
 
 // Export selectors engine
+
 var $$ = Dom7;
 $$('.toolbar .link').click(function () {
     $$('.toolbar .link').removeClass('black');
@@ -134,31 +129,104 @@ myApp.onPageAfterAnimation('product_detail', function (page) {
 myApp.onPageBeforeInit('user-index', function () {
 
 });
-myApp.onPageInit('*', function () {
-    if (!document.session) {
-        //mainView.router.load(
-        //    { 'url':'/index'}
-        //);
-        mainView.router.loadContent('/user/info/form');
 
-    }
-    else {
-        mainView.router.loadPage('/user/info/form');
-    }
-})
-//个人详情修改表单页面
-myApp.onPageInit('user-index', function () {
-    if (!document.session) {
-        //mainView.router.load(
-        //    { 'url':'/index'}
-        //);
-        mainView.router.loadContent('/user/info/form');
-
-    }
-    else {
-        mainView.router.loadPage('/user/info/form');
-    }
-    return false;
+//用户登陆页面
+myApp.onPageInit('user-login-form', function () {
+    $$('#login_login').focus(function () {
+        $$('#login_login').css('border', 'none');
+        $$('#login_login').attr('placeholder', '你的登陆名称')
+    });
+    $$('#login_password').focus(function () {
+        $$('#login_password').css('border', 'none');
+        $$('#login_password').attr('placeholder', '你的登陆密码')
+    });
+    $$('#submit').click(function () {
+        if ($$('#login_login').val() == '') {
+            $$('#login_login').css('border-bottom', 'solid red 2px');
+            $$('#login_login').attr('placeholder', '用户名不可为空')
+            return;
+        }
+        if ($$('#login_password').val() == '' ) {
+            $$('#login_password').css('border-bottom', 'solid red 2px');
+            $$('#login_password').attr('placeholder', '密码不可为空')
+            return;
+        }
+        var xhr = new XMLHttpRequest();
+        var data = new FormData();
+        data.append('login', $$('#login_login').val());
+        data.append('password', $$('#login_password').val());
+        xhr.open('post', '/user/login', false);
+        xhr.send(data);
+        var result = xhr.responseText;
+        var obj = JSON.parse(result);
+        if (obj.flag != 'True') {
+            myApp.alert(obj.msg)
+        }
+        else {
+             myApp.addNotification({
+            title: 'Hunter',
+            message: '登陆成功！'
+        });
+            mainView.router.loadPage('/index')
+        }
+    })
+});
+//用户注册页面
+myApp.onPageInit('user-register-form', function () {
+    $$('#register_login').focus(function () {
+        $$('#register_login').css('border', 'none');
+        $$('#register_login').attr('placeholder', '你的登陆名称')
+    });
+    $$('#register_password').focus(function () {
+        $$('#register_password').css('border', 'none');
+        $$('#register_password').attr('placeholder', '你的密码')
+    });
+    $$('#register_repassword').focus(function () {
+        $$('#register_repassword').css('border', 'none');
+        $$('#register_repassword').attr('placeholder', '确认你的密码')
+    });
+    $$('#ensure').click(function () {
+        if ($$('#register_login').val() == '') {
+            $$('#register_login').css('border-bottom', 'solid red 2px');
+            $$('#register_login').attr('placeholder', '用户名不可为空');
+            return;
+        }
+        if ($$('#register_password').val() == '') {
+            $$('#register_password').css('border-bottom', 'solid red 2px');
+            $$('#register_password').attr('placeholder', '密码不可为空');
+            return;
+        }
+        if ($$('#register_password').val().length < 6) {
+            $$('#register_password').css('border-bottom', 'solid red 2px');
+            myApp.alert('密码长度不可小于6位');
+            return;
+        }
+        if ($$('#register_repassword').val() != $$('#register_password').val()) {
+            $$('#register_password').css('border-bottom', 'solid red 2px');
+            $$('#register_repassword').css('border-bottom', 'solid red 2px');
+            myApp.alert('两次密码不一致');
+            return;
+        }
+        var xhr = new XMLHttpRequest();
+        var data = new FormData();
+        data.append('login', $$('#register_login').val());
+        data.append('password', $$('#register_password').val());
+        data.append('repassword', $$('#register_repassword').val());
+        xhr.open('post', '/user/register', false);
+        xhr.send(data);
+        var result = xhr.responseText;
+        var obj = JSON.parse(result);
+        if (obj.flag != 'True') {
+            myApp.alert(obj.msg)
+        }
+        else {
+            myApp.addNotification({
+                title: 'Hunter',
+                message: '恭喜你注册成功！'
+            });
+            mainView.router.loadPage('/index')
+        }
+    })
 });
 //个人详情修改表单页面
 myApp.onPageInit('user-info-form', function () {

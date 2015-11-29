@@ -34,9 +34,9 @@
 {#            s.parentNode.insertBefore(g, s);#}
 {#        })();#}
 {#    </script>#}
-{#    <script>#}
-{#        alert(WgateJs)#}
-{#    </script>#}
+    {#    <script>#}
+    {#        alert(WgateJs)#}
+    {#    </script>#}
     <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
     <!-- Path to your custom app styles-->
     <link rel="stylesheet" href="/static/css/my-app.css">
@@ -102,6 +102,9 @@
                     </li>
                 {% endfor %}
             </ul>
+        </div>
+        <div>
+
         </div>
     </div>
 </div>
@@ -241,6 +244,11 @@
                                 </a>
                             </div>
                         </div>
+                    </div>
+                    <div class="content-block">
+                        {{ session.is_login }}<br/>
+                        {{ session.openid }}<br/>
+                        {{ session.uid }}<br/>
                     </div>
                 </div>
             </div>
