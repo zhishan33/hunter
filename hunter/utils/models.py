@@ -7,14 +7,14 @@ sys.setdefaultencoding('utf8')
 import xmlrpclib
 from hunter import session
 
-# SERVER_URL = 'http://www.hunteramos.com:8069/xmlrpc/'
-# DB = 'shop'
-# admin_login = 'admin'
-# admin_pwd = '1'
-SERVER_URL = 'http://127.0.0.1:8069/xmlrpc/'
-DB = 'admin'
+SERVER_URL = 'http://www.hunteramos.com:8069/xmlrpc/'
+DB = 'shop'
 admin_login = 'admin'
-admin_pwd = 'a'
+admin_pwd = '1'
+#SERVER_URL = 'http://127.0.0.1:8069/xmlrpc/'
+#DB = 'admin'
+#admin_login = 'admin'
+#admin_pwd = 'a'
 COMMON = xmlrpclib.ServerProxy(SERVER_URL + 'common')
 OBJ = xmlrpclib.ServerProxy(SERVER_URL + 'object')
 admin_uid = COMMON.login(DB, admin_login, admin_pwd)
