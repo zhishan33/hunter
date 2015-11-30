@@ -18,18 +18,17 @@
 <div class="pages">
 
 
-    <div class="page" data-page="user-login-form">
+    <div class="page" data-page="user-register-form">
         <div class="page-content login-screen-content">
             <div class="login-screen-title">Hunter</div>
-            <form id="loginform" action="/user/login" method="post">
-                <input type="hidden" name="origin_url" value="{{ origin_url }}">
+            <form id="registerform" action="/user/register" method="post">
                 <div class="list-block">
                     <ul>
                         <li class="item-content">
                             <div class="item-inner">
                                 <div class="item-title label">账号</div>
                                 <div class="item-input">
-                                    <input type="text" placeholder="你的登陆名称" name="login" id="login_login">
+                                    <input type="text" placeholder="你的登陆名称" name="login" id="register_login">
                                 </div>
                             </div>
                         </li>
@@ -37,7 +36,16 @@
                             <div class="item-inner">
                                 <div class="item-title label">密码</div>
                                 <div class="item-input">
-                                    <input type="password" placeholder="你的密码" name="password" id="login_password">
+                                    <input type="password" placeholder="你的密码" name="password" id="register_password">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label">确认密码</div>
+                                <div class="item-input">
+                                    <input type="password" placeholder="确认你的密码" name="repassword"
+                                           id="register_repassword">
                                 </div>
                             </div>
                         </li>
@@ -45,10 +53,7 @@
                 </div>
                 <div class="list-block">
                     <ul>
-                        <li>
-                            <a class="item-link list-button" id="submit">登陆</a>
-                        </li>
-                        <li><a class="item-link list-button" href="/user/register/page">注册</a></li>
+                        <li><a class="item-link list-button" id="ensure">确认</a></li>
                     </ul>
                 </div>
             </form>

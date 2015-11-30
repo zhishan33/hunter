@@ -20,13 +20,32 @@
     <link rel="stylesheet" href="/static/css/framework7.ios.color.css">
     <link rel="stylesheet" href="/static/css/font-awesome.css">
     <link rel="stylesheet" href="/static/css/framework7.ios.color.css">
+{#    <script type="text/javascript">#}
+{#        (function () {#}
+{#            WgateJs = {};#}
+{#            WgateJs.auto_auth = true;#}
+{#            var u = (("https:" == document.location.protocol) ? "https" : "http") + "://st.weixingate.com/";#}
+{#            u = u + 'st/1743';#}
+{#            var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];#}
+{#            g.type = 'text/javascript';#}
+{#            g.defer = true;#}
+{#            g.async = true;#}
+{#            g.src = u;#}
+{#            s.parentNode.insertBefore(g, s);#}
+{#        })();#}
+{#    </script>#}
+    {#    <script>#}
+    {#        alert(WgateJs)#}
+    {#    </script>#}
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
     <!-- Path to your custom app styles-->
     <link rel="stylesheet" href="/static/css/my-app.css">
     <style>
-        .list-block ul:before{
+        .list-block ul:before {
             display: none;
         }
-        .list-block ul:after{
+
+        .list-block ul:after {
             display: none;
         }
     </style>
@@ -84,6 +103,9 @@
                 {% endfor %}
             </ul>
         </div>
+        <div>
+
+        </div>
     </div>
 </div>
 </div>
@@ -108,7 +130,6 @@
                 <div class="center sliding">Hunter</div>
             </div>
         </div>
-
         <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
         <div class="pages navbar-through toolbar-through">
             <!-- Page, data-page contains page name-->
@@ -224,6 +245,11 @@
                             </div>
                         </div>
                     </div>
+                    <div class="content-block">
+                        {{ session.is_login }}<br/>
+                        {{ session.openid }}<br/>
+                        {{ session.uid }}<br/>
+                    </div>
                 </div>
             </div>
         </div>
@@ -251,7 +277,6 @@
                     <div class="icon-info">我</div>
                 </a>
             </div>
-
         </div>
 
     </div>
@@ -259,6 +284,10 @@
 <!-- Path to Framework7 Library JS-->
 <script type="text/javascript" src="/static/js/framework7.min.js"></script>
 <!-- Path to your app js-->
+<script>
+    document.session = {% if session.is_login %}true{% else %}false{% endif %};
+</script>
 <script type="text/javascript" src="/static/js/my-app.js"></script>
+
 </body>
 </html>

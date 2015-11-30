@@ -17,14 +17,12 @@ from hunter.utils.wrappers import require_login
 
 # 产品列表页面
 @app.route('/product/index')
-@require_login
 def product_index():
     return render_template('hunter_product_index.html')
 
 
 # 产品搜索
 @app.route('/product/search', methods=['POST'])
-@require_login
 def product_search():
     try:
         pass
@@ -37,7 +35,6 @@ def product_search():
 
 # 产品的分类列表
 @app.route('/product/category', methods=['POST'])
-@require_login
 def product_category():
     try:
         pass
@@ -50,7 +47,6 @@ def product_category():
 
 # 产品分享链接
 @app.route('/product/share', methods=['POST'])
-@require_login
 def product_share():
     try:
         pass
@@ -63,7 +59,6 @@ def product_share():
 
 # 推荐产品列表
 @app.route('/product/recommend', methods=['POST'])
-@require_login
 def product_recommend():
     try:
         pass
@@ -75,6 +70,5 @@ def product_recommend():
 
 # 产品详情页面
 @app.route('/product/detail/<int:id>', methods=['POST','GET'])
-@require_login
 def product_detail(id):
     return render_template('hunter_product_detail.html')

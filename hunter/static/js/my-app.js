@@ -1,6 +1,8 @@
 // Initialize your app
 var myApp = new Framework7({
-    //cache: false,//是否打开 Ajax 缓存,因为Framework7使用ajax加载新页面，最好启用Ajax缓存，特别是你的页面内容不经常更新的时候
+    modalTitle: 'Hunter',
+    'init': false,
+    cache: false,//是否打开 Ajax 缓存,因为Framework7使用ajax加载新页面，最好启用Ajax缓存，特别是你的页面内容不经常更新的时候
     //cacheDuration: 10,//Ajax 缓存时间，在缓存有效期内加载页面不会发起新的ajax请求而是直接使用缓存的结果。默认是10分钟
     //cacheIgnore: [],//不希望被缓存的URL，这是一个字符串数组
     //cacheIgnoreGetParameters:false,//缓存是否忽略get参数，如果为 "true"，那么像 "about.html?id=2" 和 "about.html?id=3" 将会和 "about.html" 是一样的缓存。
@@ -16,13 +18,13 @@ var myApp = new Framework7({
     //ajaxLinks:undefined,//指定哪些链接需要用ajax加载，默认情况下（当为undefined时）Framework7 会使用ajax加载所有的链接。你可以通过设置一个CSS选择器来指定需要通过Ajax加载的链接，比如 "a.ajax" - 只有class 为 "ajax" 的链接。
     //dynamicPageUrl:'',//
     //externalLinks:'.external',//不应该被 Framework7 管理的链接的CSS选择器。比如 ".external" 会匹配到这样的链接 <a href="somepage.html" class="external"> (因为它有 "external" 类)
-    animatePages:true,//如果你想禁用页面切换的动画，就把这个值设置为 false。
+    animatePages: true,//如果你想禁用页面切换的动画，就把这个值设置为 false。
     //preloadPreviousPage:true,//预加载上一页，为了能让"滑动返回上一页"功能正常工作，这个值应该设置为 true。
     //pushState:false,//如果你开发web app（而不是通过PhoneGap封装的混合应用)，那么这个功能将很有用（浏览器的URL将会看上去像这样 "http://my-webapp.com/#/about.html")。用户可以通过浏览器默认的前进后退按钮来操作。
     //swipeBackPage:false,//开启/关闭滑动返回上一页功能。
     //swipeBackPageThreshold:0,//单位px，当滑动距离超过这个数值的时候，滑动返回上一步功能就会生效
     //swipeBackPageActiveArea:30,//Value in px. Width of invisible left edge of the screen that triggers swipe back action
-    swipeBackPageAnimateShadow:false,//打开/关闭 滑动返回时候的 box-shadow 动画。关闭这个功能可以提高性能。
+    swipeBackPageAnimateShadow: false,//打开/关闭 滑动返回时候的 box-shadow 动画。关闭这个功能可以提高性能。
     //swipeBackPageAnimateOpacity:true,//打开/关闭 滑动返回时候的半透明效果。关闭这个功能可以提高性能。
     //sortable:false,//如果你不使用可排序列表，可以禁用这个功能。因为禁用之后可能会有潜在的性能提升。
     //swipeout:true,//如果你使用滑动删除，禁用这个选项，可能会带来潜在的性能提升。
@@ -42,15 +44,19 @@ var myApp = new Framework7({
     //precompileTemplates:false,//是否自动编译所有的 Template7 模板。这里有更详细的说明：Templates Auto Compilation
     //templates:{},//编译好的 Template7 模板。这里有更详细的说明：Templates Auto Compilation
     //preroute: function (view, options) {
-    //    if (!userLoggedIn) {
-    //        view.router.loadPage('auth.html'); //load another page with auth form
+    //    //login_check(view,options)
+    //    if (!myApp.session) {
+    //        view.router.loadPage('/user/login'); //load another page with auth form
     //        return false; //required to prevent default router action
     //    }
     //},//这个回调函数可以用来阻止路由器默认的 加载/返回 行为，你可以自己去加载其他页面，重定向，或者做任意你需要的操作。比如我们在用户访问某些页面的时候可以去检查他是否登录，如果未登录就跳转到登录页面
-    // preprocess: function (content, url, next) {
-    //    if (url === 'people.html') {
+    //preprocess: function (content, url, next) {
+    //    if (url === '/user/info/index') {
+    //        if (!myApp.session) {
+    //
+    //        }
     //        // For example, we will retreive template JSON data using Ajax and only after that we will continue page loading process
-    //        $$.get('sometemplate.html', function(data) {
+    //        $$.get('sometemplate.html', function (data) {
     //            // Template
     //            var template = Template7.compile(content);
     //
@@ -66,8 +72,8 @@ var myApp = new Framework7({
 
 });
 
-
 // Export selectors engine
+
 var $$ = Dom7;
 $$('.toolbar .link').click(function () {
     $$('.toolbar .link').removeClass('black');
@@ -102,6 +108,7 @@ var mainView = myApp.addView('.view-main', {
 //// Callbacks to run specific code for specific pages, for example for About page:
 myApp.onPageInit('about', function (page) {
     // run createContentPage func after link was clicked
+
     $$('.create-page').on('click', function () {
         createContentPage();
     });
@@ -119,6 +126,109 @@ myApp.onPageAfterAnimation('product_detail', function (page) {
 // Callbacks to run specific code for specific pages, for example for About page:
 
 //个人详情修改表单页面
+myApp.onPageBeforeInit('user-index', function () {
+
+});
+
+//用户登陆页面
+myApp.onPageInit('user-login-form', function () {
+    $$('#login_login').focus(function () {
+        $$('#login_login').css('border', 'none');
+        $$('#login_login').attr('placeholder', '你的登陆名称')
+    });
+    $$('#login_password').focus(function () {
+        $$('#login_password').css('border', 'none');
+        $$('#login_password').attr('placeholder', '你的登陆密码')
+    });
+    $$('#submit').click(function () {
+        if ($$('#login_login').val() == '') {
+            $$('#login_login').css('border-bottom', 'solid red 2px');
+            $$('#login_login').attr('placeholder', '用户名不可为空')
+            return;
+        }
+        if ($$('#login_password').val() == '' ) {
+            $$('#login_password').css('border-bottom', 'solid red 2px');
+            $$('#login_password').attr('placeholder', '密码不可为空')
+            return;
+        }
+        var xhr = new XMLHttpRequest();
+        var data = new FormData();
+        data.append('login', $$('#login_login').val());
+        data.append('password', $$('#login_password').val());
+        xhr.open('post', '/user/login', false);
+        xhr.send(data);
+        var result = xhr.responseText;
+        var obj = JSON.parse(result);
+        if (obj.flag != 'True') {
+            myApp.alert(obj.msg)
+        }
+        else {
+             myApp.addNotification({
+            title: 'Hunter',
+            message: '登陆成功！'
+        });
+            mainView.router.loadPage('/index')
+        }
+    })
+});
+//用户注册页面
+myApp.onPageInit('user-register-form', function () {
+    $$('#register_login').focus(function () {
+        $$('#register_login').css('border', 'none');
+        $$('#register_login').attr('placeholder', '你的登陆名称')
+    });
+    $$('#register_password').focus(function () {
+        $$('#register_password').css('border', 'none');
+        $$('#register_password').attr('placeholder', '你的密码')
+    });
+    $$('#register_repassword').focus(function () {
+        $$('#register_repassword').css('border', 'none');
+        $$('#register_repassword').attr('placeholder', '确认你的密码')
+    });
+    $$('#ensure').click(function () {
+        if ($$('#register_login').val() == '') {
+            $$('#register_login').css('border-bottom', 'solid red 2px');
+            $$('#register_login').attr('placeholder', '用户名不可为空');
+            return;
+        }
+        if ($$('#register_password').val() == '') {
+            $$('#register_password').css('border-bottom', 'solid red 2px');
+            $$('#register_password').attr('placeholder', '密码不可为空');
+            return;
+        }
+        if ($$('#register_password').val().length < 6) {
+            $$('#register_password').css('border-bottom', 'solid red 2px');
+            myApp.alert('密码长度不可小于6位');
+            return;
+        }
+        if ($$('#register_repassword').val() != $$('#register_password').val()) {
+            $$('#register_password').css('border-bottom', 'solid red 2px');
+            $$('#register_repassword').css('border-bottom', 'solid red 2px');
+            myApp.alert('两次密码不一致');
+            return;
+        }
+        var xhr = new XMLHttpRequest();
+        var data = new FormData();
+        data.append('login', $$('#register_login').val());
+        data.append('password', $$('#register_password').val());
+        data.append('repassword', $$('#register_repassword').val());
+        xhr.open('post', '/user/register', false);
+        xhr.send(data);
+        var result = xhr.responseText;
+        var obj = JSON.parse(result);
+        if (obj.flag != 'True') {
+            myApp.alert(obj.msg)
+        }
+        else {
+            myApp.addNotification({
+                title: 'Hunter',
+                message: '恭喜你注册成功！'
+            });
+            mainView.router.loadPage('/index')
+        }
+    })
+});
+//个人详情修改表单页面
 myApp.onPageInit('user-info-form', function () {
     var calendarDateFormat = myApp.calendar({
         input: '#birthday',
@@ -130,10 +240,20 @@ myApp.onPageInit('user-info-form', function () {
     //
     //})
 });
+//用户登陆页面
+myApp.onPageInit('user-login', function () {
+    //alert('sdfasdfadsf');
+    $$('#imagebtn').click(function () {
+        //myApp.alert()
+        document.getElementById('image').click()
+
+    })
+});
 
 
 // Generate dynamic page
 var dynamicPageIndex = 0;
+
 function createContentPage() {
     mainView.router.loadContent(
         '<!-- Top Navbar-->' +
@@ -160,3 +280,4 @@ function createContentPage() {
     );
     return;
 }
+myApp.init()

@@ -14,22 +14,92 @@ from hunter.utils.exception import LocalException
 from hunter.utils.models import User
 import json
 from hunter.utils.wrappers import require_login
-
+import urllib2
 
 # 个人信息详情
 @app.route('/user/info/index')
-@require_login
+# @require_login
 def user_detail():
-    user = User('admin', '1')
-    if user.is_login:
-        info = user.read()
+    if not session.get('is_login', False):
+        return render_template('hunter_user_login.html')
     else:
-        info=[1]
+        info = User().read([session['uid']])
     return render_template('hunter_user_index.html', user=info[0])
 
-@app.route('/user/login',methods=['POST','GET'])
+
+# 用户openid
+@app.route('/user/wgateid/<wgateid>', methods=['POST', 'GET'])
+def getopenid(wgateid):
+    url = 'http://www.weixingate.com/wgate_user.php?wgateid=%s' % 'oXQ7gt6aI0oPhV8k5krigVCtpko4'
+    res = urllib2.urlopen(url)
+    result = res.read()
+    return result
+
+
+@app.route('/user/login', methods=['POST', 'GET'])
 def user_login():
-    user=User()
+    try:
+        if request.method == 'POST':
+            username = request.form.get('login', '')
+            password = request.form.get('password', '')
+            origin_url = request.form.get('origin_url', '/index')
+            id = User().login_user(login=username, password=password)
+            if not id:
+                raise LocalException('用户名或密码错误')
+            else:
+                session['is_login'] = True
+                session['uid'] = id
+        return make_response(json.dumps({'flag': 'True', 'msg': '', 'origin_url': origin_url}))
+    except LocalException as e:
+        return make_response(json.dumps({'flag': 'False', 'msg': e.message}))
+    except LocalException as e:
+        return make_response(json.dumps({'flag': 'False', 'msg': u'登陆失败,请稍后再试'}))
+
+
+@app.route('/user/logout', methods=['POST', 'GET'])
+def user_logout():
+    session['is_login'] = False
+    session['uid'] = None
+    return render_template('hunter_index.html')
+
+
+@app.route('/user/register/page', methods=['POST', 'GET'])
+def user_register_page():
+    return render_template('hunter_user_register.html')
+
+
+@app.route('/user/register', methods=['POST', 'GET'])
+def user_register():
+    try:
+        if request.method == 'POST':
+            origin_url = request.form.get('origin_url', '/index')
+            username = request.form.get('login', '')
+            password = request.form.get('password', '')
+            repassword = request.form.get('repassword', '')
+            if username == '':
+                raise LocalException(u'用户名不可为空')
+            if password != repassword:
+                raise LocalException(u'两次密码不匹配')
+            if len(password) < 6:
+                raise LocalException(u'密码长度不可小于6位')
+            ids = User().search([('login', '=', username)])
+            if ids:
+                raise LocalException(u'用户已经存在')
+            else:
+                import pdb
+
+                pdb.set_trace()
+                newuser = User().create(login=username, password=password, name=username)
+            session['is_login'] = True
+            session['uid'] = newuser
+            return make_response(json.dumps({'flag': 'True', 'msg': '', 'origin_url': origin_url}))
+        else:
+            raise LocalException(u'非法操作')
+    except LocalException as e:
+        return make_response(json.dumps({'flag': 'False', 'msg': e.message}))
+    except LocalException as e:
+        return make_response(json.dumps({'flag': 'False', 'msg': u'注册失败,请稍后再试'}))
+
 
 # 用户信息更新表单页
 @app.route('/user/info/form')
